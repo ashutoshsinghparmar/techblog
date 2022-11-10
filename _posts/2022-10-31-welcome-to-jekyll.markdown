@@ -3,7 +3,7 @@
 # both json or yaml can be used to define this section  
 # A mandatory thing on all pages  
 layout: post
-title:  "Welcome to Jekyll!!!" # If not defined then name used in file name is used  
+title:  "Welcome to Jekyll!" # If not defined then name used in file name is used  
 date:   2022-10-31 20:43:08 +0530 # If not defined then date in the file name is used  
 categories: jekyll update # Its being used for path along with date, baseUrl/jekyll/update/2022/10/31/  
 myvar : "A test variable" # We can define our own variables and set some value  
