@@ -66,4 +66,3 @@ permalink: /notes/
 - integrates smoothly with GHPages  
 - `baseurl` varible inside _config.yml should be modified with **name of repository** or domain name if you have one  
 - keep all the content to "gh-pages" branch of the repo  
-- 
