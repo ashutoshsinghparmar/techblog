@@ -84,7 +84,22 @@ permalink: "/architecture/miroservice/basics.htm"
 - Easy to identify the problems  
 - 
 #### Problems solved by this architecture  
+1. Single Technology Platform Restrictions  
+2. Inflexible Deployments  
+3. Inefficient use of Compute Resources  
+4. Large and Complex  
+5. Complicated and expensive ESB  
+6. Lack of toolings  
 
+
+#### Distributed Transaction  
+- **Saga Pattern**  
+  - Divide single transaction into small transactions at microservice level  
+  - Sub Transaction on success trigger next sub transaction using message  
+  - Sub Transaction on failure trigger previous sub transaction using rollback message  
+  - **Orchastration Saga Pattern** Another option is to introduce orchestration service, which takes the responsibility of executing sub transactions in sequence and also rollback in case of failure  
+- **Outbox Pattern**  
+  - Messages are first written to outbox table in microservice's db and then a publisher writes that to message bus  
 
 #### Additional Resources  
 - https://martinfowler.com/articles/microservices.html  
