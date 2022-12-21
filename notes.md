@@ -4,6 +4,12 @@ title: Notes
 permalink: /notes/
 ---
 
+#### Running Jekyll locally  
+- `jekyll new folder-name` a new website inside folder "folder-name"  
+- `bundle exec jekyll serve` process the content of the folder and generates the site and starts serving it  
+  - Need to do only first time  
+  - If there is any change in `Gemfile` then only we need to rebuild the website  
+- `jekyll server` for subsequent serve commands  
 
 #### Front Matters  
 - Very first section on each page or blog post or any other type of custom layouts  
@@ -11,13 +17,23 @@ permalink: /notes/
 - **Default** values can be defined in _config.yaml, that will apply to all of our pages which uses them by default  
 - eg: `author: Ashutosh`, this can be placed in one place and will be applied in all pages  
 
+#### Creating new Posts(https://youtu.be/gsYqPL9EFwQ)  
+- created inside `_posts` folder  
+- Naming convention: date-postname.extension  
+  - Starts with date any date(YYYY-MM-DD format)  
+  - This date is used for folder strucutre(yyyy/mm/dd/title-of-post.html) in generated site  
+  - Title of the post  
+  - extension(markdown or html)  
+- Always Add front matter in the beginning  
+  - `layout`: this front matter variable will give a design to the page while rendering(page, post or custom layouts)  
+  - `title`: this variable is used to override the default title value from file name  
+  - `date`: this variable is used to override the default date value from file name, it also modifies the path in which it has kept the corresponding html file in the resultant directory  
+- Page starts appearing on the website as soon as it it added in the structure, no additional work required  
+- sub-directories inside `_posts` can be used to organise posts, but it do not impact the path of the post  
+
 #### Draft Posts  
 - Should be placed inside "_drafts" folder  
 - `jekyll serve --draft` this will serve the draft folder content too(used for testing)  
-
-#### New Pages  
-- Need front matter with layout  
-- Such pages starts appearing on the site  
 
 #### Permanent links for pages, blog posts etc  
 - `parmalink` variable is used for this  
@@ -31,7 +47,6 @@ permalink: /notes/
 
 #### Modifying Layouts  
 - https://youtu.be/bDQsGdCWv4I  
-
 
 #### Variables  
 - Variables are defined inside front matter  
@@ -66,4 +81,3 @@ permalink: /notes/
 - integrates smoothly with GHPages  
 - `baseurl` varible inside _config.yml should be modified with **name of repository** or domain name if you have one  
 - keep all the content to "gh-pages" branch of the repo  
-- 
